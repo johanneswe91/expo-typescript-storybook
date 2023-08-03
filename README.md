@@ -32,6 +32,45 @@ Run storybook using on of the following commands
 - Open src/MyApp.tsx
     - Add references to your fonts in useFonts
 
+## Tests
+
+### Setup
+
+Install Detox on your machine with the following commands
+```
+brew tap wix/brew
+brew install --HEAD applesimutils
+npm install -g detox-cli
+```
+
+### Writing Tests
+
+### Running Tests
+
+- Install eas-cli globally. npm i -g eas-cli
+- Platform specific setup
+    - iOS
+        - brew install fastlane
+    - Android
+- Login to your Expo.io account using
+    - eas login
+- Start your local Development Server
+    - yarn start
+- Create a iOS or Android Development build using either
+    - iOS
+        - yarn detox:ios:debug:build
+        - yarn detox:ios:release:build
+    - Android
+        - yarn detox:android:debug:build
+        - yarn detox:android:release:build
+    - Note: This step will take some time
+- Run your tests
+    - iOS
+        - yarn detox:ios:debug:test
+        - yarn detox:ios:release:build
+    - Android
+        - yarn detox:android:debug:test
+        - yarn detox:android:release:test
 ### Using Fonts
 - Use your added Fotnts
 
