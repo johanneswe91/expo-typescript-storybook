@@ -1,9 +1,15 @@
+import { Navbar, NavbarPlaceholder, NavbarTitle } from '@components/Navbar';
 import { ERoutes, RegisteredParamList2 } from '@components/Navigation/constants';
 import ScreenContainer from '@components/ScreenContainer';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { NativeStackHeaderProps, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { Text, TouchableOpacity } from 'react-native';
 
 type Props = NativeStackScreenProps<RegisteredParamList2, ERoutes.Registered3>;
+type HeaderProps = NativeStackHeaderProps & {
+	route: NativeStackHeaderProps['options'] & {
+		params?: RegisteredParamList2[ERoutes.Registered3];
+	};
+};
 
 export const RegisteredScreen3 = ({ navigation, route }: Props) => {
 	return (
@@ -17,5 +23,17 @@ export const RegisteredScreen3 = ({ navigation, route }: Props) => {
 				<Text>Go Forward</Text>
 			</TouchableOpacity>
 		</ScreenContainer>
+	);
+};
+
+export const RegisteredScreen3Header = (props: HeaderProps) => {
+	const { navigation, options, route } = props;
+
+	return (
+		<Navbar>
+			<NavbarPlaceholder />
+			<NavbarTitle title="Registered 3" />
+			<NavbarPlaceholder />
+		</Navbar>
 	);
 };

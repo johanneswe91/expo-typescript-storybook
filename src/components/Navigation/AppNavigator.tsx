@@ -16,12 +16,19 @@ import {
 	RegisteredScreen1,
 	RegisteredScreen1Header,
 	RegisteredScreen2,
+	RegisteredScreen2Header,
 	RegisteredScreen3,
+	RegisteredScreen3Header,
 	RegisteredScreen4,
+	RegisteredScreen4Header,
 	RegisteredScreen5,
+	RegisteredScreen5Header,
 	RegisteredScreen6,
+	RegisteredScreen6Header,
 	RegisteredScreen7,
-	RegisteredScreen8
+	RegisteredScreen7Header,
+	RegisteredScreen8,
+	RegisteredScreen8Header
 } from '@screens/Registered';
 
 const PublicStack = createNativeStackNavigator<AnonymousParamList>();
@@ -94,7 +101,13 @@ function RegisteredStackNavigator1() {
 					header: RegisteredScreen1Header
 				}}
 			/>
-			<RegisteredStack1.Screen name={ERoutes.Registered2} component={RegisteredScreen2} />
+			<RegisteredStack1.Screen
+				name={ERoutes.Registered2}
+				component={RegisteredScreen2}
+				options={{
+					header: RegisteredScreen2Header
+				}}
+			/>
 		</RegisteredStack1.Navigator>
 	);
 }
@@ -102,8 +115,20 @@ function RegisteredStackNavigator1() {
 function RegisteredStackNavigator2() {
 	return (
 		<RegisteredStack2.Navigator>
-			<RegisteredStack2.Screen name={ERoutes.Registered3} component={RegisteredScreen3} />
-			<RegisteredStack2.Screen name={ERoutes.Registered4} component={RegisteredScreen4} />
+			<RegisteredStack2.Screen
+				name={ERoutes.Registered3}
+				component={RegisteredScreen3}
+				options={{
+					header: RegisteredScreen3Header
+				}}
+			/>
+			<RegisteredStack2.Screen
+				name={ERoutes.Registered4}
+				component={RegisteredScreen4}
+				options={{
+					header: RegisteredScreen4Header
+				}}
+			/>
 		</RegisteredStack2.Navigator>
 	);
 }
@@ -111,8 +136,20 @@ function RegisteredStackNavigator2() {
 function RegisteredStackNavigator3() {
 	return (
 		<RegisteredStack3.Navigator>
-			<RegisteredStack3.Screen name={ERoutes.Registered5} component={RegisteredScreen5} />
-			<RegisteredStack3.Screen name={ERoutes.Registered6} component={RegisteredScreen6} />
+			<RegisteredStack3.Screen
+				name={ERoutes.Registered5}
+				component={RegisteredScreen5}
+				options={{
+					header: RegisteredScreen5Header
+				}}
+			/>
+			<RegisteredStack3.Screen
+				name={ERoutes.Registered6}
+				component={RegisteredScreen6}
+				options={{
+					header: RegisteredScreen6Header
+				}}
+			/>
 		</RegisteredStack3.Navigator>
 	);
 }
@@ -120,8 +157,20 @@ function RegisteredStackNavigator3() {
 function RegisteredStackNavigator4() {
 	return (
 		<RegisteredStack4.Navigator>
-			<RegisteredStack4.Screen name={ERoutes.Registered7} component={RegisteredScreen7} />
-			<RegisteredStack4.Screen name={ERoutes.Registered8} component={RegisteredScreen8} />
+			<RegisteredStack4.Screen
+				name={ERoutes.Registered7}
+				component={RegisteredScreen7}
+				options={{
+					header: RegisteredScreen7Header
+				}}
+			/>
+			<RegisteredStack4.Screen
+				name={ERoutes.Registered8}
+				component={RegisteredScreen8}
+				options={{
+					header: RegisteredScreen8Header
+				}}
+			/>
 		</RegisteredStack4.Navigator>
 	);
 }

@@ -1,3 +1,4 @@
+import { Navbar, NavbarPlaceholder, NavbarTitle } from '@components/Navbar';
 import { ERoutes, RegisteredParamList1 } from '@components/Navigation/constants';
 import ScreenContainer from '@components/ScreenContainer';
 import type { NativeStackHeaderProps, NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -28,5 +29,11 @@ export const RegisteredScreen1 = ({ navigation, route }: Props) => {
 export const RegisteredScreen1Header = (props: HeaderProps) => {
 	const { navigation, options, route } = props;
 
-	return <View />;
+	return (
+		<Navbar>
+			<NavbarPlaceholder />
+			<NavbarTitle title="Registered 1" />
+			<NavbarPlaceholder />
+		</Navbar>
+	);
 };

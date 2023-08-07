@@ -28,9 +28,9 @@
 		},
 		"extra": {
 			"eas": {
-				"projectId": "EAS_PROJECT_ID"
+				"projectId": "cea182ac-1ec5-4347-a1b0-dc4bb9b5e651"
 			}
 		},
-		"plugins": ["sentry-expo", "expo-localization"]
+		"plugins": ["expo-localization"]
 	}
 }

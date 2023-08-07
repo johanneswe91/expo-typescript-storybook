@@ -12,19 +12,19 @@ describe('Example', () => {
 	it('should have welcome screen', async () => {
 		// Click button and go back on each tab
 		await element(by.id('button_forward')).tap();
-		await element(by.id('button_back')).tap();
+		await element(by.id('navbar_button_back')).tap();
 
 		await element(by.id('tab2')).tap();
 		await element(by.id('button_forward')).tap();
-		await element(by.id('button_back')).tap();
+		await element(by.id('navbar_button_back')).tap();
 
 		await element(by.id('tab3')).tap();
 		await element(by.id('button_forward')).tap();
-		await element(by.id('button_back')).tap();
+		await element(by.id('navbar_button_back')).tap();
 
 		await element(by.id('tab4')).tap();
 		await element(by.id('button_forward')).tap();
-		await element(by.id('button_back')).tap();
+		await element(by.id('navbar_button_back')).tap();
 
 		await element(by.id('tab1')).tap();
 	});
