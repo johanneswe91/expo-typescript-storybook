@@ -21,7 +21,6 @@ async function openAppForDebugBuild(platform) {
 		: // Local testing with packager
 		  getDeepLinkUrl(getDevLauncherPackagerUrl(platform));
 
-	console.log(deepLinkUrl);
 	if (platform === 'ios') {
 		await device.launchApp({
 			newInstance: true

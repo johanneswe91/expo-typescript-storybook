@@ -71,17 +71,61 @@ npm install -g detox-cli
     - Android
         - yarn detox:android:debug:test
         - yarn detox:android:release:test
-### Using Fonts
+
+## Working with translations
+    ```
+    import { useTranslation } from 'react-i18next';
+    import { Text } from 'react-native'
+    ...
+    const MyComponent = ()=> {
+        const { t } = useTranslation();
+
+        return (
+            <Text>{t('TRANSLATION_KEY')}</Text>
+        )
+    }
+    ```
+   
+- Simply add all your translation keys in src/config/locales/LOCALE.json
+- Then inside any component use the t function above to render your translations
+
+### Switching language
+```
+import i18next from 'i18next';
+
+i18next.changeLanguage(lng)
+```
+- Expects a 2 character country code
+
+## Using env Variables
+- Create a file named .env at the project top level
+- In src/config/env.d.ts add the types for your environment variables
+- To access your environment variables use the following snippet
+```
+import { YOUR_VARIABLE } from 'react-native-dotenv'
+```
+## Using Sentry
+- Create a file named .env at the project top level
+- Add the following keys and values in your .env file
+```
+SENTRY_DSN=
+SENTRY_URL=
+SENTRY_ORGANIZATION=
+SENTRY_PROJECT=
+SENTRY_AUTH_TOKEN=
+```
+- Further informations on how to setup Sentry see [here](https://docs.sentry.io/platforms/react-native/)
+
+## Using Fonts
 - Use your added Fotnts
 
     ```
     <Text style={{ fontFamily: Roboto }}>Text in your Font</Text>
     ```
 
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Feedback
 
-If you have any feedback please contact me at johanneswe91@gmail.com
+If you have any feedback or encounter any problems please contact me at johanneswe91@gmail.com

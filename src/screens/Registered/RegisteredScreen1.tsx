@@ -27,7 +27,6 @@ export const RegisteredScreen1 = ({ navigation, route }: Props) => {
 
 export const RegisteredScreen1Header = (props: HeaderProps) => {
 	const { navigation, options, route } = props;
-	console.log(route);
 
 	return <View />;
 };
