@@ -1,5 +1,6 @@
 import MyApp from './src/MyApp';
 import { store } from './src/rematch/store';
+import { NavigationContainer } from '@react-navigation/native';
 import { getPersistor } from '@rematch/persist';
 import Constants from 'expo-constants';
 import { StatusBar } from 'expo-status-bar';
@@ -23,7 +24,9 @@ function App() {
 					persistor={getPersistor()}
 				>
 					<SafeAreaView style={{ flex: 1 }}>
-						<MyApp />
+						<NavigationContainer>
+							<MyApp />
+						</NavigationContainer>
 					</SafeAreaView>
 				</PersistGate>
 			</SafeAreaProvider>

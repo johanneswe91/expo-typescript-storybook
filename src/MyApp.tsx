@@ -1,6 +1,7 @@
+import AppNavigator from '@components/Navigation/AppNavigator';
 import { useFonts } from 'expo-font';
 import React from 'react';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 
 const MyApp = () => {
 	const [fontsLoaded] = useFonts({
@@ -17,20 +18,7 @@ const MyApp = () => {
 		);
 	}
 
-	return (
-		<View style={styles.container}>
-			<Text>Open up App.tsx to start working on your app!</Text>
-		</View>
-	);
+	return <AppNavigator />;
 };
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center'
-	}
-});
 
 export default MyApp;
