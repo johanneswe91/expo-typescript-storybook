@@ -2,7 +2,10 @@
 	"name": "@johanneswe91/expo-typescript-storybook",
 	"version": "1.0.0",
 	"homepage": "https://github.com/johanneswe91/expo-typescript-storybook",
-	"repository": "git://github.com/johanneswe91/expo-typescript-storybook.git",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/johanneswe91/expo-typescript-storybook.git"
+	},
 	"description": "Expo Typescript starter project with storybook support",
 	"author": "Johannes Wenzel <johanneswe91@gmail.com>",
 	"license": "MIT",
@@ -45,7 +48,6 @@
 		"@react-navigation/native-stack": "^6.9.13",
 		"@rematch/core": "^2.2.0",
 		"@rematch/persist": "^2.1.2",
-		"add": "^2.0.6",
 		"expo": "~49.0.5",
 		"expo-application": "~5.3.0",
 		"expo-constants": "~14.4.2",
@@ -122,5 +124,14 @@
 				"name": "iPhone 14 Pro Max"
 			}
 		}
-	}
+	},
+	"bugs": {
+		"url": "https://github.com/johanneswe91/expo-typescript-storybook/issues"
+	},
+	"main": "index.js",
+	"keywords": [
+		"expo",
+		"typescript",
+		"storybook"
+	]
 }
