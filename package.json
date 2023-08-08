@@ -30,15 +30,14 @@
 		"storybook-watch": "sb-rn-watcher --config-path .ondevice",
 		"storybook": "sb-rn-get-stories --config-path .ondevice && cross-env STORYBOOK_ENABLED='true' expo start",
 		"storybook:web": "start-storybook -p 6006",
-		"storybook:ios": "sb-rn-get-stories --config-path .ondevice && cross-env STORYBOOK_ENABLED='true' expo start --ios",
-		"storybook:android": "sb-rn-get-stories --config-path .ondevice && cross-env STORYBOOK_ENABLED='true' expo start --android",
+		"storybook:ios": "sb-rn-get-stories --config-path .ondevice && cross-env STORYBOOK_ENABLED='true' expo run:ios",
+		"storybook:android": "sb-rn-get-stories --config-path .ondevice && cross-env STORYBOOK_ENABLED='true' expo run:android",
 		"test:ios:debug": "detox test --configuration ios.sim.debug",
 		"test:ios:release": "detox test --configuration ios.sim.release",
 		"test:android:debug": "detox test --configuration android.emu.debug",
 		"test:android:release": "detox test --configuration android.emu.release"
 	},
 	"dependencies": {
-		"@expo/webpack-config": "^18.1.2",
 		"@react-native-async-storage/async-storage": "1.18.2",
 		"@react-native-community/datetimepicker": "7.2.0",
 		"@react-native-community/slider": "4.4.2",
@@ -128,7 +127,6 @@
 	"bugs": {
 		"url": "https://github.com/johanneswe91/expo-typescript-storybook/issues"
 	},
-	"main": "index.js",
 	"keywords": [
 		"expo",
 		"typescript",

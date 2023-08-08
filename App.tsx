@@ -11,16 +11,9 @@ import i18n from 'i18next';
 import React from 'react';
 import { initReactI18next } from 'react-i18next';
 import { ActivityIndicator, SafeAreaView, View } from 'react-native';
-// import { SENTRY_DSN } from 'react-native-dotenv';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
-import * as Sentry from 'sentry-expo';
-
-// Sentry.init({
-// 	dsn: SENTRY_DSN,
-// 	enabled: !__DEV__
-// });
 
 i18n.use(initReactI18next).init({
 	lng: Localization.locale.split('-')[0],
