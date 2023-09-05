@@ -32,6 +32,16 @@
 				"projectId": "cea182ac-1ec5-4347-a1b0-dc4bb9b5e651"
 			}
 		},
-		"plugins": ["expo-localization"]
+		"plugins": [
+			"expo-localization",
+			[
+				"expo-build-properties",
+				{
+					"ios": {
+						"flipper": true
+					}
+				}
+			]
+		]
 	}
 }
